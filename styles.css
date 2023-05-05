@@ -25,7 +25,7 @@ body {
 }
 
 .grid {
-    border: 0.1px solid rgba(0, 0, 0, 0.216);
+    border: 2px solid rgba(0, 0, 0, 0.216);
     margin-top: 50px;
     display: flex;
     flex-direction: row;
@@ -40,11 +40,12 @@ body {
 }
 
 .squareOutline {
-    border: 0.01px solid black;
+    /* border: 0.1px solid black; */
     box-sizing: border-box;
     flex-basis: 1;
     width: calc(100% / var(--square-size));
     height: calc(100% / var(--square-size));
+    background-color: var(--square-color);
 
 }
 
@@ -72,23 +73,47 @@ body {
     display: flex;
     margin-top: 20px;
     justify-content: center;
+    gap: 2rem;
 }
  
 .options {
+    display: flex;
+    /* border: 2px solid red; */
     align-self: center;
+    flex-direction: column;
+    width: 500px;
+}
+
+.text {
+    margin-top: 90px;
+    font-size: 30px;
+    text-align:center;
+    align-self: center;
+    
 }
 .gridSize {
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    align-self: center;
+    margin-top: 10px;
+    font-size: 100px;
     width: fit-content;
 }
 input {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 50%; /* Full-width */
+    width: 150px; /* Full-width */
     height: 25px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
+    align-self: flex-end;
+}
+
+.rgb, .black, .clear {
+    margin-bottom: 2px;
+    width: 100px;
+    height: 25px;
+    align-self: flex-end;
 }
